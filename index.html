@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tapri Café</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <h2>☕ Tapri Café</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero reveal">
+  <h1>Chill. Sip. Repeat.</h1>
+  <p>Best Hangout Café in Hathras</p>
+  <button onclick="whatsapp()">Order Now</button>
+</section>
+
+<!-- About -->
+<section id="about" class="about reveal">
+  <h2>About Tapri Café</h2>
+  <p>
+    Tapri Café is one of the most popular hangout spots in Hathras. 
+    Known for its cozy ambience and delicious fast food.
+  </p>
+</section>
+
+<!-- Menu -->
+<section id="menu" class="menu reveal">
+  <h2>🔥 Our Menu</h2>
+
+  <div class="menu-grid">
+
+    <div class="card reveal">Tandoori Pizza Roll ⭐ - ₹130</div>
+    <div class="card reveal">Veg Loaded Pizza - ₹210</div>
+    <div class="card reveal">Cheese Loaded Fries - ₹150</div>
+    <div class="card reveal">Paneer Burger - ₹200</div>
+    <div class="card reveal">White Sauce Pasta - ₹200</div>
+    <div class="card reveal">Momos - ₹120</div>
+    <div class="card reveal">Cold Coffee ⭐ - ₹120</div>
+    <div class="card reveal">Oreo Shake ⭐ - ₹150</div>
+
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="gallery reveal">
+  <h2>✨ Café Vibes</h2>
+
+  <div class="gallery-grid">
+    <img class="reveal" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+    <img class="reveal" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+    <img class="reveal" src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+    <img class="reveal" src="https://images.unsplash.com/photo-1521017432531-fbd92d768814">
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact reveal">
+  <h2>📍 Visit Us</h2>
+  <p>Tapri Café, Hathras</p>
+  <p>📞 +91 8449816393</p>
+  <p>🕒 2 PM – 11 PM</p>
+
+  <iframe src="https://maps.google.com/maps?q=hathras&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+  <button onclick="whatsapp()">Order on WhatsApp</button>
+</section>
+
+<footer>
+  <p>© 2026 Tapri Café | Designed By Priyank  </p>
+</footer>
+
+<!-- WhatsApp -->
+<div class="whatsapp" onclick="whatsapp()">💬</div>
+
+<div class="cursor"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-tea"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

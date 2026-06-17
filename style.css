@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #333;
+  border-top: 6px solid #ff9800;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(255,152,0,0.2);
+}
+
+.navbar h2 {
+  color: #ff9800;
+}
+
+.navbar a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  position: relative;
+}
+
+/* underline animation */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff9800;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb") center/cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.hero h1, .hero p, .hero button {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 55px;
+  text-shadow: 0 0 20px rgba(255,152,0,0.7);
+}
+
+/* Glow Button */
+.hero button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff9800;
+}
+
+/* Sections */
+.about, .menu, .gallery, .contact {
+  padding: 70px;
+  text-align: center;
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap: 25px;
+}
+
+/* Glass Cards */
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.4s;
+}
+
+/* Neon hover */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(255,152,0,0.7);
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,152,0,0.7);
+}
+
+/* Contact */
+.contact iframe {
+  width: 80%;
+  height: 250px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* WhatsApp */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, green, lime);
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 15px green;
+}
+
+/* Scroll animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  background: black;
+  padding: 20px;
+  text-align: center;
+  color: gray;
+}
+
+/* Animations */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Inner dot */
+.cursor {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Outer neon ring */
+.cursor-ring {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #00f2fe;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  box-shadow: 
+    0 0 10px #00f2fe,
+    0 0 20px #ff00cc;
+  transition: transform 0.15s ease;
+}
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Tea cursor */
+.cursor-tea {
+  width: 45px;
+  height: 45px;
+  background: url("tea.png") no-repeat center/contain;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  
+  /* Glow effect */
+  filter: drop-shadow(0 0 10px #ffcc66) drop-shadow(0 0 20px #ff9900);
+  
+  transition: transform 0.1s ease;
+}
